@@ -349,7 +349,7 @@
 <p><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</p>
 <p><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</p>
 
-<p><br><span class="comment"># CSV 파일 읽기</span></p>
+<p><span class="comment"># CSV 파일 읽기</span></p>
 <p><p>df = pd.<span class="function">read_csv</span>(<span class="string">"파일이름.csv"</span>, encoding=<span class="string">"utf-8"</span>)</p></p>
                     </div>
                     
@@ -573,30 +573,30 @@
                     </div>
                     
                     <div class="code-block">
-<span class="comment"># 히스토그램 - 수치형 데이터의 분포 확인</span>
-df[<span class="string">"컬럼명"</span>].<span class="function">hist</span>()
-plt.<span class="function">show</span>()
+<p><span class="comment"># 히스토그램 - 수치형 데이터의 분포 확인</span></p>
+<p>df[<span class="string">"컬럼명"</span>].<span class="function">hist</span>()</p>
+<p>plt.<span class="function">show</span>()</p>
 
-<span class="comment"># 산점도 - 두 수치형 변수 간의 관계</span>
-plt.<span class="function">scatter</span>(df[<span class="string">"컬럼1"</span>], df[<span class="string">"컬럼2"</span>])
-plt.<span class="function">xlabel</span>(<span class="string">"X축 제목"</span>)
-plt.<span class="function">ylabel</span>(<span class="string">"Y축 제목"</span>)
-plt.<span class="function">title</span>(<span class="string">"그래프 제목"</span>)
-plt.<span class="function">show</span>()
+<p><span class="comment"># 산점도 - 두 수치형 변수 간의 관계</span></p>
+<p>plt.<span class="function">scatter</span>(df[<span class="string">"컬럼1"</span>], df[<span class="string">"컬럼2"</span>])</p>
+<p>plt.<span class="function">xlabel</span>(<span class="string">"X축 제목"</span>)</p>
+<p>plt.<span class="function">ylabel</span>(<span class="string">"Y축 제목"</span>)</p>
+<p>plt.<span class="function">title</span>(<span class="string">"그래프 제목"</span>)</p>
+<p>plt.<span class="function">show</span>()</p>
 
-<span class="comment"># 막대그래프 - 범주형 데이터의 빈도 비교</span>
-sns.<span class="function">countplot</span>(x=<span class="string">"범주컬럼"</span>, data=df)
-sns.<span class="function">barplot</span>(x=<span class="string">"범주컬럼"</span>, y=<span class="string">"수치컬럼"</span>, data=df)
+<p><span class="comment"># 막대그래프 - 범주형 데이터의 빈도 비교</span></p>
+<p>sns.<span class="function">countplot</span>(x=<span class="string">"범주컬럼"</span>, data=df)</p>
+<p>sns.<span class="function">barplot</span>(x=<span class="string">"범주컬럼"</span>, y=<span class="string">"수치컬럼"</span>, data=df)</p>
 
-<span class="comment"># 박스플롯 - 데이터 분포, 중앙값, 이상치 확인</span>
-sns.<span class="function">boxplot</span>(x=<span class="string">"범주컬럼"</span>, y=<span class="string">"수치컬럼"</span>, data=df)
+<p><span class="comment"># 박스플롯 - 데이터 분포, 중앙값, 이상치 확인</span></p>
+<p>sns.<span class="function">boxplot</span>(x=<span class="string">"범주컬럼"</span>, y=<span class="string">"수치컬럼"</span>, data=df)</p>
 
-<span class="comment"># 파이차트 - 전체 대비 각 범주의 비율</span>
-df[<span class="string">"컬럼명"</span>].<span class="function">value_counts</span>().<span class="function">plot</span>.<span class="function">pie</span>(autopct=<span class="string">'%.1f%%'</span>)
+<p><span class="comment"># 파이차트 - 전체 대비 각 범주의 비율</span></p>
+<p>df[<span class="string">"컬럼명"</span>].<span class="function">value_counts</span>().<span class="function">plot</span>.<span class="function">pie</span>(autopct=<span class="string">'%.1f%%'</span>)</p>
 
-<span class="comment"># 상관관계 히트맵 - 다중 변수 간 상관계수</span>
-sns.<span class="function">heatmap</span>(df.<span class="function">corr</span>(), annot=<span class="keyword">True</span>, cmap=<span class="string">"coolwarm"</span>)
-plt.<span class="function">show</span>()
+<p><span class="comment"># 상관관계 히트맵 - 다중 변수 간 상관계수</span></p>
+<p>sns.<span class="function">heatmap</span>(df.<span class="function">corr</span>(), annot=<span class="keyword">True</span>, cmap=<span class="string">"coolwarm"</span>)</p>
+<p>plt.<span class="function">show</span>()</p>
                     </div>
                     
                     <div class="interactive-section">
