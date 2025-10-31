@@ -494,28 +494,28 @@
                     </div>
                     
                     <div class="code-block">
-<span class="comment"># 1. 데이터 타입 변환</span>
-df[<span class="string">"수치컬럼"</span>] = df[<span class="string">"수치컬럼"</span>].<span class="function">astype</span>(int)
-df[<span class="string">"날짜컬럼"</span>] = pd.<span class="function">to_datetime</span>(df[<span class="string">"날짜컬럼"</span>])
+<p><p><span class="comment"># 1. 데이터 타입 변환</span></p></p>
+<p>df[<span class="string">"수치컬럼"</span>] = df[<span class="string">"수치컬럼"</span>].<span class="function">astype</span>(int)</p>
+<p>df[<span class="string">"날짜컬럼"</span>] = pd.<span class="function">to_datetime</span>(df[<span class="string">"날짜컬럼"</span>])</p>
 
 
-<span class="comment"># 2. 새로운 컬럼 생성 (파생 변수)</span>
-df[<span class="string">"새컬럼"</span>] = df[<span class="string">"컬럼A"</span>] / df[<span class="string">"컬럼B"</span>]
+<p><span class="comment"># 2. 새로운 컬럼 생성 (파생 변수)</span></p>
+<p>df[<span class="string">"새컬럼"</span>] = df[<span class="string">"컬럼A"</span>] / df[<span class="string">"컬럼B"</span>]</p>
 
 
-<span class="comment"># 조건에 따른 범주형 컬럼 생성</span>
-bins = [0, 20, 40, 60, 100]
-labels = [<span class="string">"~19"</span>, <span class="string">"20-39"</span>, <span class="string">"40-59"</span>, <span class="string">"60+"</span>]
-df[<span class="string">"연령대"</span>] = pd.<span class="function">cut</span>(df[<span class="string">"나이"</span>], bins=bins, labels=labels)
+<p><span class="comment"># 조건에 따른 범주형 컬럼 생성</span></p>
+<p>bins = [0, 20, 40, 60, 100]</p>
+<p>labels = [<span class="string">"~19"</span>, <span class="string">"20-39"</span>, <span class="string">"40-59"</span>, <span class="string">"60+"</span>]</p>
+<p>df[<span class="string">"연령대"</span>] = pd.<span class="function">cut</span>(df[<span class="string">"나이"</span>], bins=bins, labels=labels)</p>
 
 
-<span class="comment"># 3. 데이터 병합</span>
-pd.<span class="function">merge</span>(df1, df2, on=<span class="string">"키컬럼"</span>, how=<span class="string">"inner"</span>)    <span class="comment"># 수직 병합</span>
-pd.<span class="function">concat</span>([df1, df2], axis=0)                      <span class="comment"># 수평 병합</span>
+<p><span class="comment"># 3. 데이터 병합</span></p>
+<p>pd.<span class="function">merge</span>(df1, df2, on=<span class="string">"키컬럼"</span>, how=<span class="string">"inner"</span>)    <span class="comment"># 수직 병합</span></p>
+<p>pd.<span class="function">concat</span>([df1, df2], axis=0)                      <span class="comment"># 수평 병합</span></p>
 
 
-<span class="comment"># 4. 그룹핑 및 집계 (Group By)</span>
-agg_data = df.<span class="function">groupby</span>(<span class="string">"그룹컬럼"</span>)[<span class="string">"집계컬럼"</span>].<span class="function">agg</span>([<span class="string">"mean"</span>, <span class="string">"sum"</span>, <span class="string">"count"</span>])
+<p><span class="comment"># 4. 그룹핑 및 집계 (Group By)</span></p>
+<p>agg_data = df.<span class="function">groupby</span>(<span class="string">"그룹컬럼"</span>)[<span class="string">"집계컬럼"</span>].<span class="function">agg</span>([<span class="string">"mean"</span>, <span class="string">"sum"</span>, <span class="string">"count"</span>])</p>
                     </div>
                     
                     <div class="interactive-section">
