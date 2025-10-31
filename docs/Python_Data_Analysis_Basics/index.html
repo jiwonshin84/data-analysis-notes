@@ -398,20 +398,20 @@
                     </div>
                     
                     <div class="code-block">
-<span class="comment"># 결측치 개수 확인</span>
-df.<span class="function">isna</span>().<span class="function">sum</span>()
+<p><span class="comment"># 결측치 개수 확인</span></p>
+<p>df.<span class="function">isna</span>().<span class="function">sum</span>()</p>
 
 
-<span class="comment"># 결측치 삭제 (행 단위)</span>
-df.<span class="function">dropna</span>(axis=0, inplace=<span class="keyword">True</span>)
+<p><span class="comment"># 결측치 삭제 (행 단위)</span></p>
+<p>df.<span class="function">dropna</span>(axis=0, inplace=<span class="keyword">True</span>)</p>
 
 
-<span class="comment"># 결측치를 0으로 채우기</span>
-df.<span class="function">fillna</span>(0, inplace=<span class="keyword">True</span>)
+<p><span class="comment"># 결측치를 0으로 채우기</span></p>
+<p>df.<span class="function">fillna</span>(0, inplace=<span class="keyword">True</span>)</p>
 
 
-<span class="comment"># 특정 컬럼만 중앙값으로 채우기</span>
-df[<span class="string">"나이"</span>].<span class="function">fillna</span>(df[<span class="string">"나이"</span>].<span class="function">median</span>(), inplace=<span class="keyword">True</span>)
+<p><span class="comment"># 특정 컬럼만 중앙값으로 채우기</span></p>
+<p>df[<span class="string">"나이"</span>].<span class="function">fillna</span>(df[<span class="string">"나이"</span>].<span class="function">median</span>(), inplace=<span class="keyword">True</span>)</p>
                     </div>
                     
                     <div class="interactive-section">
